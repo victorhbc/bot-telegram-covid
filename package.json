@@ -13,7 +13,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "nodemon teste.js"
+    "start": "node bot.js",
+    "test": "nodemon bot.js"
   }
 }
