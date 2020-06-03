@@ -25,7 +25,7 @@ module.exports = function () {
 
     const chatId = msg.chat.id;
 
-    resp = `O Brasil possui ${JSON.stringify(this.a.data.data.deaths)} casos de covid confirmado, casos ativos e  mortes`;
+    resp = `O Brasil possui um total de ${JSON.stringify(this.a.data.data.cases)} casos de covid-19 ativos`;
     // ${JSON.stringify(this.a.data.data.confirmed)} ${JSON.stringify(this.a.data.data.deaths)}
     bot.sendMessage(chatId, resp);
   });
