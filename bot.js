@@ -9,7 +9,15 @@ module.exports = function () {
     polling: true,
   });
 
-  bot.onText(/\/1/, (msg, match) => {
+  bot.onText(/\/ajuda/, (msg, match) => {
+    const chatId = msg.chat.id;
+
+    resp = `Olá, que bom que você está usando o bot, os comandos disponíveis são \n\t/1 - irá informar o primeiro estado do brasil com mais casos de covid\n\t/2 - irá informar o segundo estado do brasil com mais casos de covid\n\t/3 - irá informar o terceiro estado do brasil com mais casos de covid\n\t/brasil - irá informar os casos de covid de todos os estados brasileiros`;
+
+    bot.sendMessage(chatId, resp);
+  });
+
+  bot.onText(/\/total/, (msg, match) => {
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1")
       .then((response) => (this.a = response))
@@ -17,7 +25,18 @@ module.exports = function () {
 
     const chatId = msg.chat.id;
 
-    console.log(this.a.data.data[0]);
+    resp = `O Brasil possui ${this.a.data.data.cases}`;
+
+    bot.sendMessage(chatId, resp);
+  });
+
+  bot.onText(/\/1/, (msg, match) => {
+    axios
+      .get("https://covid19-brazil-api.now.sh/api/report/v1")
+      .then((response) => (this.a = response))
+      .catch((error) => console.log(error));
+
+    const chatId = msg.chat.id;
 
     resp = `O primeiro estado brasileiro com mais casos de corona virus e ${this.a.data.data[0].state}, o mesmo possui ${this.a.data.data[0].cases} casos registrados`;
 
@@ -32,8 +51,6 @@ module.exports = function () {
 
     const chatId = msg.chat.id;
 
-    console.log(this.a.data.data[1]);
-
     resp = `O primeiro estado brasileiro com mais casos de corona virus e ${this.a.data.data[1].state}, o mesmo possui ${this.a.data.data[1].cases} casos registrados`;
 
     bot.sendMessage(chatId, resp);
@@ -47,7 +64,7 @@ module.exports = function () {
 
     const chatId = msg.chat.id;
 
-    console.log(this.a.data.data[2]);
+    // console.log(this.a.data.data[2]);
 
     resp = `O primeiro estado brasileiro com mais casos de corona virus e ${this.a.data.data[2].state}, o mesmo possui ${this.a.data.data[2].cases} casos registrados`;
 
