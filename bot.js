@@ -12,7 +12,7 @@ module.exports = function () {
   bot.onText(/\/ajuda/, (msg, match) => {
     const chatId = msg.chat.id;
 
-    resp = `Olá, que bom que você está usando o bot, os comandos disponíveis são \n\t/1 - irá informar o primeiro estado do brasil com mais casos de covid\n\t/2 - irá informar o segundo estado do brasil com mais casos de covid\n\t/3 - irá informar o terceiro estado do brasil com mais casos de covid\n\t/brasil - irá informar os casos de covid de todos os estados brasileiros`;
+    resp = `Olá, que bom que você está usando o bot, os comandos disponíveis são \n\t/1 - irá informar o primeiro estado do brasil com mais casos de covid\n\t/2 - irá informar o segundo estado do brasil com mais casos de covid\n\t/3 - irá informar o terceiro estado do brasil com mais casos de covid\n\t/brasil - irá informar os casos de covid de todos os estados brasileiros\n\t/total - irá informar nuemros totais de casos de covid no Brasil`;
 
     bot.sendMessage(chatId, resp);
   });
