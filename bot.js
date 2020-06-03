@@ -1,10 +1,8 @@
-"use strict";
-
 const axios = require("axios").default;
 
 const TelegramBot = require(`node-telegram-bot-api`);
 
-module.exports = () => {
+module.exports = function () {
   const TOKEN = `1234732971:AAEq5CwrwdkbVjIxnMPe_9ksIwjySyrcSAI`;
 
   const bot = new TelegramBot(TOKEN, {
