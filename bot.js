@@ -25,7 +25,7 @@ module.exports = function () {
 
     const chatId = msg.chat.id;
 
-    resp = `O Brasil possui ${this.a.data.data.cofirmed} casos de covid sendo que ${this.a.data.data.cases} estão ativos e houveram ${this.a.data.data.deaths} mortes`;
+    resp = `O Brasil possui ${this.a.data.data.confirmed} casos de covid sendo que ${this.a.data.data.cases} estão ativos e houveram ${this.a.data.data.deaths} mortes`;
 
     bot.sendMessage(chatId, resp);
   });
@@ -94,6 +94,6 @@ module.exports = function () {
     const chatId = msg.chat.id;
 
     // send a message to the chat acknowledging receipt of their message
-    bot.sendMessage(chatId, 'Received your message');
+    bot.sendMessage(chatId, 'Para ver todos os comandos digite /ajuda');
   });
 };
