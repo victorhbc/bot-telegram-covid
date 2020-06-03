@@ -1,3 +1,4 @@
+const express = require("express");
 const axios = require("axios").default;
 
 const TelegramBot = require(`node-telegram-bot-api`);
@@ -6,7 +7,6 @@ const TOKEN = `1234732971:AAEq5CwrwdkbVjIxnMPe_9ksIwjySyrcSAI`;
 
 const bot = new TelegramBot(TOKEN, {
   polling: true,
-  port: process.env.PORT || 443,
 });
 
 bot.onText(/\/1/, (msg, match) => {
@@ -72,3 +72,7 @@ bot.onText(/\/brasil/, (msg, match) => {
 
   bot.sendMessage(chatId, resp);
 });
+
+const app = express();
+
+app.listen(process.env.PORT || 443);
