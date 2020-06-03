@@ -25,7 +25,7 @@ module.exports = function () {
 
     const chatId = msg.chat.id;
 
-    resp = `O Brasil possui ${this.a.data.data.cases}`;
+    resp = `O Brasil possui ${this.a.data.data.cofirmed} casos de covid sendo que ${this.a.data.data.cases} estão ativos e houveram ${this.a.data.data.deaths} mortes`;
 
     bot.sendMessage(chatId, resp);
   });
@@ -88,5 +88,12 @@ module.exports = function () {
     }
 
     bot.sendMessage(chatId, resp);
+  });
+
+  bot.on('message', (msg) => {
+    const chatId = msg.chat.id;
+
+    // send a message to the chat acknowledging receipt of their message
+    bot.sendMessage(chatId, 'Received your message');
   });
 };
