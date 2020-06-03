@@ -6,6 +6,7 @@ const TOKEN = `1234732971:AAEq5CwrwdkbVjIxnMPe_9ksIwjySyrcSAI`;
 
 const bot = new TelegramBot(TOKEN, {
   polling: true,
+  port: process.env.PORT || 443,
 });
 
 bot.onText(/\/1/, (msg, match) => {
