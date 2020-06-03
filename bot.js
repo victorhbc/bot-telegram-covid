@@ -25,7 +25,7 @@ module.exports = function () {
 
     const chatId = msg.chat.id;
 
-    resp = `O Brasil possui ${this.a.data.data.cases}`;
+    resp = `O Brasil possui ${this.a.data.cases}`;
 
     bot.sendMessage(chatId, resp);
   });
