@@ -19,13 +19,13 @@ module.exports = function () {
 
   bot.onText(/\/total/, (msg, match) => {
     axios
-      .get("https://covid19-brazil-api.now.sh/api/report/v1")
+      .get("https://covid19-brazil-api.now.sh/api/report/v1/brazil")
       .then((response) => (this.a = response))
       .catch((error) => console.log(error));
 
     const chatId = msg.chat.id;
 
-    resp = `O Brasil possui ${toString(this.a.data)}`;
+    resp = `O Brasil possui ${this.a.data.data.cases}`;
 
     bot.sendMessage(chatId, resp);
   });
