@@ -2,7 +2,7 @@
 
 const http = require("http");
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 require("./bot.js")();
 
