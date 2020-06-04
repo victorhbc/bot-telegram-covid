@@ -23,14 +23,28 @@ module.exports = function () {
       .then((response) => (this.a = response))
       .catch((error) => console.log(error));
 
+    axios
+      .get("https://covid19-brazil-api.now.sh/api/report/v1/brazil")
+      .then((response) => (this.a = response))
+      .catch((error) => console.log(error));
+
     const chatId = msg.chat.id;
 
-    resp = `O Brasil possui ${JSON.stringify(this.a.data.data.cases)} casos de covid confirmado, ${JSON.stringify(this.a.data.data.confirmed)} casos ativos e  mortes${JSON.stringify(this.a.data.data.deaths)}`;
+    resp = `O Brasil possui ${JSON.stringify(
+      this.a.data.data.cases
+    )} casos de covid confirmado, ${JSON.stringify(
+      this.a.data.data.confirmed
+    )} casos ativos e  mortes${JSON.stringify(this.a.data.data.deaths)}`;
 
     bot.sendMessage(chatId, resp);
   });
 
   bot.onText(/\/1/, (msg, match) => {
+    axios
+      .get("https://covid19-brazil-api.now.sh/api/report/v1")
+      .then((response) => (this.a = response))
+      .catch((error) => console.log(error));
+
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1")
       .then((response) => (this.a = response))
@@ -49,6 +63,11 @@ module.exports = function () {
       .then((response) => (this.a = response))
       .catch((error) => console.log(error));
 
+    axios
+      .get("https://covid19-brazil-api.now.sh/api/report/v1")
+      .then((response) => (this.a = response))
+      .catch((error) => console.log(error));
+
     const chatId = msg.chat.id;
 
     resp = `O primeiro estado brasileiro com mais casos de corona virus e ${this.a.data.data[1].state}, o mesmo possui ${this.a.data.data[1].cases} casos registrados`;
@@ -57,6 +76,11 @@ module.exports = function () {
   });
 
   bot.onText(/\/3/, (msg, match) => {
+    axios
+      .get("https://covid19-brazil-api.now.sh/api/report/v1")
+      .then((response) => (this.a = response))
+      .catch((error) => console.log(error));
+
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1")
       .then((response) => (this.a = response))
@@ -77,6 +101,11 @@ module.exports = function () {
       .then((response) => (this.a = response))
       .catch((error) => console.log(error));
 
+    axios
+      .get("https://covid19-brazil-api.now.sh/api/report/v1")
+      .then((response) => (this.a = response))
+      .catch((error) => console.log(error));
+
     const chatId = msg.chat.id;
 
     console.log(this.a.data.data[2]);
@@ -90,10 +119,10 @@ module.exports = function () {
     bot.sendMessage(chatId, resp);
   });
 
-  bot.on('message', (msg) => {
+  bot.on("message", (msg) => {
     const chatId = msg.chat.id;
 
     // send a message to the chat acknowledging receipt of their message
-    bot.sendMessage(chatId, 'Para ver todos os comandos digite /ajuda');
+    bot.sendMessage(chatId, "Para ver todos os comandos digite /ajuda");
   });
 };
