@@ -20,7 +20,7 @@ module.exports = function () {
   bot.onText(/\/total/, (msg, match) => {
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1/brazil")
-      .then((response) => (this.a = response))
+      .then((response) => response)
       .catch((error) => console.log(error));
 
     axios
@@ -42,7 +42,7 @@ module.exports = function () {
   bot.onText(/\/1/, (msg, match) => {
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1")
-      .then((response) => (this.a = response))
+      .then((response) => response)
       .catch((error) => console.log(error));
 
     axios
@@ -60,7 +60,7 @@ module.exports = function () {
   bot.onText(/\/2/, (msg, match) => {
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1")
-      .then((response) => (this.a = response))
+      .then((response) => response)
       .catch((error) => console.log(error));
 
     axios
@@ -78,7 +78,7 @@ module.exports = function () {
   bot.onText(/\/3/, (msg, match) => {
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1")
-      .then((response) => (this.a = response))
+      .then((response) => response)
       .catch((error) => console.log(error));
 
     axios
@@ -98,7 +98,7 @@ module.exports = function () {
   bot.onText(/\/brasil/, (msg, match) => {
     axios
       .get("https://covid19-brazil-api.now.sh/api/report/v1")
-      .then((response) => (this.a = response))
+      .then((response) => response)
       .catch((error) => console.log(error));
 
     axios
