@@ -10,15 +10,20 @@ Comando para orientação de uso "/ajuda".
 
 Para rodar o código localmente é necessário navegar até o local que o repositório foi clonado
 
-substituir a linha 8 do arquivo /lib/ibmWatsonCredentials.js 
+substituir a linha 6 do arquivo bot.js
 ```javascript
 apikey: "[YOUR KEY]"
 ```
 
-executar os comandos no terminal
+executar os comandos no seu terminal
 ```bash
 npm install
 npm start
+``` 
+ou 
+```bash
+yarn
+yarn start
 ```
 
 ![image](https://cdn.discordapp.com/attachments/695803788904366120/718150919237271652/Untitled-4.png)
