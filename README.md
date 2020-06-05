@@ -12,7 +12,7 @@ Para rodar o código localmente é necessário navegar até o local que o reposi
 
 substituir a linha 6 do arquivo bot.js
 ```javascript
-apikey: "[YOUR KEY]"
+const TOKEN = `[YOUR API TOKEN]`;
 ```
 
 executar os comandos no seu terminal
