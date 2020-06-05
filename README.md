@@ -8,4 +8,8 @@ O bot não utiliza o IBM Watson devido a documentação estar obsoleta.
 Link do bot: https://t.me/Covid_Puc_Campinas_bot
 Comando para orientação de uso "/ajuda".
 
+```bash
+npm install
+```
+
 ![image](https://cdn.discordapp.com/attachments/695803788904366120/718150919237271652/Untitled-4.png)
