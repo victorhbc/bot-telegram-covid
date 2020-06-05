@@ -8,8 +8,17 @@ O bot não utiliza o IBM Watson devido a documentação estar obsoleta.
 Link do bot: https://t.me/Covid_Puc_Campinas_bot
 Comando para orientação de uso "/ajuda".
 
+Para rodar o código localmente é necessário navegar até o local que o repositório foi clonado
+
+substituir a linha 8 do arquivo /lib/ibmWatsonCredentials.js 
+```javascript
+apikey: "[YOUR KEY]"
+```
+
+executar os comandos no terminal
 ```bash
 npm install
+npm start
 ```
 
 ![image](https://cdn.discordapp.com/attachments/695803788904366120/718150919237271652/Untitled-4.png)
